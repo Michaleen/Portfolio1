@@ -1,0 +1,97 @@
+html {
+  /*overflow-x: hidden;*/
+  scroll-behavior: smooth;
+}
+
+
+/* :root{} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* body {} */
+
+section {
+  background-color: #b7cebd;
+  border: solid black 1px;
+}
+
+
+
+
+.nav-bar {
+   border: solid black 1px;
+}
+
+
+ul  {
+  list-style-type: none;
+}
+
+
+ul a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: rgb(127, 191, 211);
+}
+
+
+.hero-section {
+  height: 100vh;
+  background-color: #2b9348;
+  color: whitesmoke;
+  font-size: 48px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: red;
+  /* position: sticky; */
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: .5em;
+  background-color: transparent;
+}
+
+.about-me-section {
+  height: 100vh;
+  background-color: whitesmoke;
+  color: rgb(24, 4, 4);
+  font-size: 48px;
+}
+
+
+
+.projects-section {
+  height: 100vh;
+  background-color: #000000;
+  color: whitesmoke;
+  font-size: 48px;
+}
+
+.skillset-section {
+  height: 100vh;
+  background-color: whitesmoke;
+  color: rgb(24, 4, 4);
+  font-size: 48px;
+}
+
+
+.contact-me-section {
+  height: 100vh;
+  background-color: #000000;
+  color: whitesmoke;
+  font-size: 48px;
+}
