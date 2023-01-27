@@ -7,7 +7,9 @@ html {
 
 :root {
   --typingDuration: 3.8s;
-  --typedCharacters: 16;
+  --typedCharacters: 15;
+    color: whitesmoke;
+
 }
 
 
@@ -25,8 +27,9 @@ body {
 }
 
 section {
-  background-color: #5abfd8;
-  border: solid black 1px;
+  
+  border: solid black 2px;
+ 
 }
 
 
@@ -43,15 +46,23 @@ ul  {
 }
 
 nav ul a {
-  transition: background-color 20s;}
+  transition: background-color 20s;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 4.1s);
+}
+
 ul a {
   text-decoration: none;
+ 
 
 }
 
 nav {
   background-color: #2b9348;
   color: #5abfd8;
+  box-shadow: none;
+  /* webkit-box-shadow: none; */
   
 }
 
@@ -77,35 +88,53 @@ nav a:hover {
 }
 
 .navi-items {
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
   font-size: .5em;
   background-color: transparent;
+  text-align: center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.navi-items li {
+
+  padding: 0px 70px;
+  text-align: center;
+ 
+
+
+  
+}
 .about-me-section {
   height: 140vh;
-  background-color: rgb(63, 165, 212);
-  color: rgb(24, 4, 4);
+  /* background-color: rgb(12, 118, 218); */
+  background-color: #020218ef;
+  color: rgb(194, 11, 11);
   font-size: 38px;
- 
-  /* background-image: url("/IMAGES/kona_surf_session.jpg"); */
+  border: solid black 1px;
+ /* background-image: url("/IMAGES/kona_surf_session.jpg"); */
   background-size: cover;
 }
 
 
+#kona-pic {
+  border: solid black 1px;
+  border-radius: 10% 10%;
+}
 
 .projects-section {
   /* height: 100vh; */
-  color: rgb(126, 30, 30);
+  color: rgb(194, 11, 11);
   font-size: 22px;
   position: relative;
-  background-color: #000000;
+  background-color: #020218ef;
 }
 
 .projects-section::before{
   content: "";
-  background-image: url("/IMAGES/coding_screen_small.jpg");
+  /* background-image: url("/IMAGES/coding_screen_small.jpg"); */
   background-size: cover;
   position: absolute;
   top: 0px;
@@ -118,7 +147,7 @@ nav a:hover {
 
 .skillset-section {
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: rgb(202, 202, 202);
   color: rgb(24, 4, 4);
   font-size: 38px;
 }
@@ -126,16 +155,84 @@ nav a:hover {
 
 .contact-me-section {
   height: 100vh;
-  background-color: #000000;
-  color: whitesmoke;
-  font-size: 38px;
+  background-color: #2b9348;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgb(17, 8, 3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+/* .contact-form {
+  width: 22vw;
+} */
+
+input[type=text]:not(.browser-default), input[type=email]:not(.browser-default) {
+  font-family: inherit;
+  border: solid;
+  /* border: solid black 1px; */
+  border-style: inset;
+  width: 100%;
+  background-color: whitesmoke;
+  font-size: 60%;
+ 
+}
+
+
+
+textarea {
+  font-family: inherit;
+  border: solid;
+  /* border: solid black 1px; */
+  border-style: inset;
+  resize: none;
+  height: 18vh;
+  width: 100%;
+  background-color: whitesmoke;
+  font-size: 60%;
+}
+
+textarea:focus-visible{
+  outline: none;
+}
+
+label {
+  font-size: .8rem;
+  color: inherit;
+}
+
+.submit-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#submit-button {
+  padding: 4px 20px;
+  border-radius: .4em;
+  color: whitesmoke;
+  border: solid rgba(3, 80, 3, 0.658) 1px;
+  background-color: #185328b4;
+  font-weight: 300;
+}
 #typed-container {
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-top: 74px;;
+  margin-top: 12px;;
   
 }
 
@@ -144,6 +241,8 @@ h1 {
   /* font-family: 'Source Code Pro', monospace; */
   width: max-content;
   /* border: solid black 1px; */
+  font-weight: 200;
+  margin-top: 10vh;
 }
 
 h1::before, h1::after {
@@ -162,17 +261,32 @@ h1::before {
 }
 
 h1::after {
-  width: 0.1em;
+  width: 0.04em;
   background:whitesmoke;
   animation: typing var(--typingDuration) steps(var(--typedCharacters)) 1.7s forwards,
   cursor 750ms infinite;
   
 }
 
+h2 {
+  margin-top: 2vh;
+  margin-bottom: 8vh;
+  font-weight: 300;
+
+}
+
 #intro-text {
   opacity: 0;
   animation: fade-in 3s ease forwards calc(var(--typingDuration) + 2.7s);
   /* border: solid black 1px; */
+  font-weight: 200;
+  margin-bottom: 2vh;
+}
+
+#svg8 {
+  opacity: 0;
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 2.7s);
+
 }
 @keyframes typing {
   to { 
@@ -194,12 +308,6 @@ h1::after {
 
 
 
-
-
-
-
-
-
 .project-cards {
   display: flex;
   justify-content: space-around;
@@ -210,20 +318,25 @@ h1::after {
   margin: 0px 0px 0 0px;
   box-shadow: 0 0 24px -10px; 
   width: 350px;
-  background-color: #000000;
+  background-color: #05021d;
   border:none;
+  text-align: center;
+ 
 }
 
 .pic-div {
   margin: 0px 0px 0 0px;
-  box-shadow: 0 0 20px -10px; 
+  /* box-shadow: 0 0 10px -10px;  */
   width: 350px;
 }
 
 .collapsible-header {
-  background-color: #000000;
+  background-color: #05021d;
   -webkit-tap-highlight-color: black;
   border: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .collabsible-body {
@@ -232,6 +345,7 @@ h1::after {
 
 }
 .card {
-  background-color: #000000;
-  box-shadow: 0 0 24px -10px rgb(231, 46, 14); 
+  background-color:  #05021d;
+  box-shadow: 0 0 24px -10px rgb(194, 11, 11);
+  
 }
